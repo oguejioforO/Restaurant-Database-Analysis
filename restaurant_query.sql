@@ -19,13 +19,14 @@ CREATE TABLE orders(
     item_id INT
 );
 
--- Load CSV data (optional)
--- LOAD DATA INFILE 'C:/order_details.csv'
--- INTO TABLE orders
--- FIELDS TERMINATED BY ','
--- ENCLOSED BY '"'
--- LINES TERMINATED BY '\n'
--- IGNORE 1 ROWS;
+-- Load CSV data 
+load data infile 
+'C:/order_details.csv'
+into table orders
+fields terminated by ','
+enclosed by '"'
+lines terminated by '\n'
+ignore 1 rows;
 
 -- View menu items
 SELECT * FROM menu_items;
